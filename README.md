@@ -5,7 +5,7 @@ Prints out flag options.
 ## Example
 
 ```ts
-import { printHelp } from "https://deno.land/x/deno-cli-help@v1.0.0/mod.ts"
+import { printHelp, Options } from "https://deno.land/x/deno-cli-help@v1.0.0/mod.ts"
 
 const options: Options = {
   name: '<cli-command>',
