@@ -1,6 +1,6 @@
 interface Flag {
   name: string;
-  aliases: string[];
+  aliases?: string[];
   description: string;
 }
 
@@ -47,7 +47,7 @@ export function printHelp(options: Options) {
   console.log();
   console.log('%cOPTIONS', 'font-weight: bold');
   options.flags.forEach((flag) => {
-    console.log(`\t-${flag.aliases.join(', -')}, --${flag.name}\t\t${flag.description}`)
+    console.log(`\t${flag.aliases ? '-' + flag.aliases.join(', -') + ', ' : ''}--${flag.name}\t\t${flag.description}`)
   })
   if (options.examples) {
     console.log();
